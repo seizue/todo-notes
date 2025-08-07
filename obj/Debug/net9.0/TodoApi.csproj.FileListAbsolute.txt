@@ -51,7 +51,6 @@ C:\Users\ADMIN\TodoApi\obj\Debug\net9.0\TodoApi.genruntimeconfig.cache
 C:\Users\ADMIN\TodoApi\obj\Debug\net9.0\ref\TodoApi.dll
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\bin\Debug\net9.0\appsettings.json
-C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\bin\Debug\net9.0\TodoApi.staticwebassets.runtime.json
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\bin\Debug\net9.0\TodoApi.staticwebassets.endpoints.json
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\bin\Debug\net9.0\TodoApi.exe
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\bin\Debug\net9.0\TodoApi.deps.json
@@ -89,8 +88,6 @@ C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\rjimswa.
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\scopedcss\bundle\TodoApi.styles.css
-C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\compressed\wnyr5754f1-l5jo0aynym.gz
-C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\compressed\v7fzscjp8g-d0mcajwvgp.gz
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\Ven\Documents\Repository\Repo\TodoApi\TodoApi\obj\Debug\net9.0\staticwebassets.development.json
