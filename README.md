@@ -1,2 +1,2 @@
 # TodoApi
-Todo Notes using Asp.net Core
+Todo Notes API using Asp.net Core
