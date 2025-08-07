@@ -1,0 +1,41 @@
+@page
+@model TodoApi.Pages.IndexModel
+@{
+    ViewData["Title"] = "Todo UI";
+}
+
+<h2>Todo List</h2>
+
+<input type="text" id="todoTitle" placeholder="Enter todo title" />
+<button onclick="addTodo()">Add</button>
+
+<ul id="todoList"></ul>
+
+<script>
+    async function loadTodos() {
+        const res = await fetch('/api/todo');
+        const data = await res.json();
+        const list = document.getElementById('todoList');
+        list.innerHTML = '';
+        data.forEach(todo => {
+            const li = document.createElement('li');
+            li.textContent = todo.title + (todo.isComplete ? " ✅" : " ❌");
+            list.appendChild(li);
+        });
+    }
+
+    async function addTodo() {
+        const title = document.getElementById('todoTitle').value;
+        await fetch('/api/todo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ title: title, isComplete: false })
+        });
+        document.getElementById('todoTitle').value = '';
+        loadTodos();
+    }
+
+    loadTodos();
+</script>
