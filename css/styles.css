@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+.todo-app {
+  max-width: 600px;
+  width: 100%;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.input-group input {
+  box-shadow: none !important;
+}
+
+.todo-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.todo-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+  border-radius: 12px !important;
+  padding: 10px 15px;
+  transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.todo-text {
+  font-size: 1rem;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.check-btn {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+}
+
+.check-btn:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+input.form-control {
+  max-width: 300px;
+  display: inline-block;
+}
+
+
+
