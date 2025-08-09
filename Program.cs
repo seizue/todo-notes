@@ -1,3 +1,4 @@
+using Microsoft.Extensions.FileProviders;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Data;
 
@@ -11,44 +12,58 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Enable CORS (Allow all for development)
+// Enable CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-       policy.AllowAnyOrigin()
+        policy.AllowAnyOrigin()
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
 });
 
-// Enable serving static files from wwwroot
-builder.Services.AddDirectoryBrowser(); 
-
 var app = builder.Build();
 
-// Middleware order matters!
+// Middleware
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 
-// Enable CORS middleware
+// Serve `/docs` folder
+var docsPath = Path.Combine(Directory.GetCurrentDirectory(), "docs");
+if (Directory.Exists(docsPath))
+{
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(docsPath),
+        RequestPath = "/docs"
+    });
+}
+
+// Enable CORS
 app.UseCors("AllowAll");
 
+// Swagger
 app.UseSwagger();
 app.UseSwaggerUI();
 
+// Authorization
 app.UseAuthorization();
 
 app.MapControllers();
 
+// Custom landing page at "/"
 app.MapGet("/", (HttpContext context) =>
 {
     var swaggerUrl = $"{context.Request.Scheme}://{context.Request.Host}/swagger";
+    var docsUrl = $"{context.Request.Scheme}://{context.Request.Host}/docs/index.html";
     return Results.Text(
-        $"<h1>Todo Notes API</h1><p>See the <a href='{swaggerUrl}'>Swagger UI</a>.</p>",
+        $"""
+        <h1>Todo Notes API</h1>
+        <p>See the <a href='{swaggerUrl}'>Swagger UI</a>.</p>
+        <p>See the <a href='{docsUrl}'>Docs Page</a>.</p>
+        """,
         "text/html"
     );
 });
 
 app.Run("http://0.0.0.0:" + (Environment.GetEnvironmentVariable("PORT") ?? "5065"));
-
