@@ -41,4 +41,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run("http://0.0.0.0:" + (Environment.GetEnvironmentVariable("PORT") ?? "5000"));
+app.MapGet("/", (HttpContext context) =>
+{
+    var swaggerUrl = $"{context.Request.Scheme}://{context.Request.Host}/swagger";
+    return Results.Text(
+        $"<h1>Todo Notes API</h1><p>See the <a href='{swaggerUrl}'>Swagger UI</a>.</p>",
+        "text/html"
+    );
+});
+
+app.Run("http://0.0.0.0:" + (Environment.GetEnvironmentVariable("PORT") ?? "5065"));
+
