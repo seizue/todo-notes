@@ -58,7 +58,7 @@ app.MapGet("/", (HttpContext context) =>
 
     return Results.Text(
         $"""
-        <h1>Todo Notes API</h1>
+        <h1>TodoAPI</h1>
         <p>See the <a href='{swaggerUrl}'>Swagger UI</a>.</p>
     
         """,
