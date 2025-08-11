@@ -127,11 +127,13 @@
 
   <script>
   
-// Or switch based on environment:
-const apiBase = isLocal 
-  ? "http://localhost:5065/swagger/" 
-  : "https://todo-notes-dbb0.onrender.com/swagger/v1/swagger.json";
+// Detect if running locally
+const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
+// Set API base URL depending on environment
+const apiBase = isLocal
+  ? "http://localhost:5065/api/todo" // Your local API endpoint
+  : "https://todo-notes-dbb0.onrender.com/api/todo"; // Your Render API endpoint
 
     let currentFilter = 'all';
 
