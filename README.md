@@ -12,9 +12,24 @@ This project is deployed and live on Render: [https://todo-notes-dbb0.onrender.c
 - Live hosting on Render
 
 ## Live Demo
-- **Frontend Testing UI (GitHub Pages):** [https://seizue.github.io/todoapi/](https://seizue.github.io/todoapi/)
+- **Frontend Testing UI (GitHub Pages):** `https://seizue.github.io/todoapi/`
 - **Base URL:** `https://todo-notes-dbb0.onrender.com/`
 - **Swagger UI:** `https://todo-notes-dbb0.onrender.com/swagger`
 
+## Local Development
+To run the API locally:
+
+1. **Clone this repository**  
+   ```bash
+   git clone https://github.com/yourusername/todoapi.git
+   cd todoapi
+Open a terminal in the project folder and run:
+
+  `dotnet build`
+  
+  `dotnet run`
+  
+- API Base URL: `http://localhost:5065/`
+  
 ## Screenshot
 <img width="1343" height="642" alt="msedge_otHTlF0uCA" src="https://github.com/user-attachments/assets/3f217201-4d00-4bc5-b367-e4974ac6e60d" />
