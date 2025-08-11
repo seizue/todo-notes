@@ -41,3 +41,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+services:
+  - type: web
+    name: todoapi
+    env: docker
+    plan: free
+    branch: main
+    region: singapore   
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
