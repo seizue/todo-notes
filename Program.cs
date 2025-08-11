@@ -55,12 +55,12 @@ app.MapControllers();
 app.MapGet("/", (HttpContext context) =>
 {
     var swaggerUrl = $"{context.Request.Scheme}://{context.Request.Host}/swagger";
-    var docsUrl = $"{context.Request.Scheme}://{context.Request.Host}/docs/index.html";
+
     return Results.Text(
         $"""
         <h1>Todo Notes API</h1>
         <p>See the <a href='{swaggerUrl}'>Swagger UI</a>.</p>
-        <p>See the <a href='{docsUrl}'>Docs Page</a>.</p>
+    
         """,
         "text/html"
     );
