@@ -23,13 +23,12 @@ To run the API locally:
    ```bash
    git clone https://github.com/yourusername/todoapi.git
    cd todoapi
-Open a terminal in the project folder and run:
-
-  `dotnet build`
-  
-  `dotnet run`
-  
+2. **Open a terminal in the project folder and run:**
+   ```bash
+   dotnet build
+   dotnet run
 - API Base URL: `http://localhost:5065/`
+- Frontend: `http://localhost:5065/docs/index.html`
   
 ## Screenshot
 <img width="1343" height="642" alt="msedge_otHTlF0uCA" src="https://github.com/user-attachments/assets/3f217201-4d00-4bc5-b367-e4974ac6e60d" />
