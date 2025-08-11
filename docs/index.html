@@ -128,15 +128,16 @@
   <script>
   
 // Or switch based on environment:
-const isLocal = location.hostname === "localhost";
-const apiBase = isLocal ? "/api/todo" : "https://todo-notes-dbb0.onrender.com";
+const apiBase = isLocal 
+  ? "http://localhost:5000/api/Todo" 
+  : "https://todo-notes-dbb0.onrender.com/api/Todo";
+
 
 
     let currentFilter = 'all';
 
 async function addTodo() {
-    const title = document.getElementById("todoTitle").value;
-
+    const title = document.getElementById("todoInput").value.trim();
     const response = await fetch(API_URL, {
         method: "POST",
         headers: {
