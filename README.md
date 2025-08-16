@@ -21,7 +21,7 @@ To run the API locally:
 
 1. **Clone this repository**  
    ```bash
-   git clone https://github.com/yourusername/todoapi.git
+   git clone https://github.com/seizue/todoapi.git
    cd todoapi
 2. **Open a terminal in the project folder and run:**
    ```bash
